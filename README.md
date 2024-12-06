@@ -1,67 +1,45 @@
 # Simple-Laravel-App
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Deskripsi
+Aplikasi Laravel ini menampilkan kemampuan untuk menangani:
+- Authentication (Login) - Menggunakan JWT untuk autentikasi.
+- CRUD Process - Menyediakan operasi dasar seperti Create, Read, Update, dan Delete pada resource.
+- Data Search + Input Validation - Validasi data dan fitur pencarian.
+- Data Pagination - Menampilkan data dengan pagination.
+## Fitur
+- Autentikasi dengan JWT: Menggunakan token JWT untuk mengakses API.
+- CRUD (Create, Read, Update, Delete): API memungkinkan operasi CRUD pada resource (misalnya, Post).
+- Validasi Data: Setiap input divalidasi menggunakan aturan Laravel.
+- Pencarian Data: Memungkinkan pencarian data berdasarkan query parameter.
+- Pagination: Menampilkan data dalam halaman yang terpisah menggunakan pagination.
+## Prasyarat
+Sebelum memulai, pastikan Anda memiliki hal-hal berikut terinstal:
+- PHP 8.x+
+- Composer
+- MySQL atau database lainnya yang kompatibel
+## Instalasi
+- Clone repositori ini ke komputer Anda.
+    ```language
+    git clone https://github.com/NathasyaLP/Simple-Laravel-App.git
+    ```
+- Install Dependencies
+  Setelah clone repositori, masuk ke direktori project dan install dependencies menggunakan Composer:
+  ```language
+  cd repository-name
+  composer install
+  ```
+- Konfigurasi File .env
+  Salin file .env.example ke .env dan lakukan pengaturan konfigurasi sesuai dengan kebutuhan Anda, seperti database dan JWT secret key.
+  ```language
+    cp .env.example .env
+    ```
+- Generate JWT Secret Key
+  Jalankan perintah berikut untuk menghasilkan JWT secret key:
+  ```language
+    php artisan jwt:secret
+    ```
+- Setup Database
+  Buat database di MySQL dan update pengaturan database di file .env Anda. Kemudian jalankan migrasi dan seeding (jika ada):
+  ```language
+    php artisan migrate --seed
+  ```
+- Jalankan Aplikasi
